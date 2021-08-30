@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+.container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  transform-style: preserve-3d;
+  min-height: 35vh;
+  width: 15rem;
+  border-radius: 30px;
+  padding: 0rem 5rem;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+}
+
+button.active {
+  background: #585858;
+  color: white;
+}
+.purchase {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  transition: all 0.75s ease-out;
+}
+.purchase button {
+  width: 100%;
+  padding: 1rem 0rem;
+  background: #f54642;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: bolder;
+}
+
+h2 {
+  position: fixed;
+  bottom: 20px;
+  left: 40%;
+  color: #f54642;
+}
+
+h1 {
+  position: fixed;
+  top: 50px;
+  left: 45%;
+  color: #000000;
+  font-size: 100;
+}

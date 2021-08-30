@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ILOGGER</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <body>
+    <h1>ILogger</h1>
+    <script>
+      async function errorCall1() {
+        let res = await axios
+          .get("http://localhost:5000/ERR_ASSIGN_TO_CONSTANT")
+          .catch((err) => {
+            document.getElementById("h2").innerHTML =
+              "Error : Assign to constant !";
+          });
+      }
+      async function errorCall2() {
+        let res = await axios
+          .get("http://localhost:5000/NetworkError")
+          .catch((err) => {
+            document.getElementById("h2").innerHTML = "Error : Network error !";
+          });
+      }
+      async function errorCall3() {
+        let res = await axios
+          .get("http://localhost:5000/ERR_INVALID_ARG_TYPE")
+          .catch((err) => {
+            document.getElementById("h2").innerHTML =
+              "Error : error invalid argument type !";
+          });
+      }
+      async function errorCall4() {
+        let res = await axios
+          .get("http://localhost:5000/ReferenceError")
+          .catch((err) => {
+            document.getElementById("h2").innerHTML =
+              "Error : reference error !";
+          });
+      }
+    </script>
+    <h2 id="h2"></h2>
+
+    <div id="container1" class="container">
+      <div id="card1" class="card">
+        <div class="purchase">
+          <button onclick="errorCall1()">error 1</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="container2" class="container">
+      <div id="card2" class="card">
+        <div class="purchase">
+          <button onclick="errorCall2()">error 2</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="container3" class="container">
+      <div id="card3" class="card">
+        <div class="purchase">
+          <button onclick="errorCall3()">error 3</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="container4" class="container">
+      <div id="card4" class="card">
+        <div class="purchase">
+          <button onclick="errorCall4()">error 4</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app1.js"></script>
+    <script src="./app2.js"></script>
+    <script src="./app3.js"></script>
+    <script src="./app4.js"></script>
+  </body>
+</html>
